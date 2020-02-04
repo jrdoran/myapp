@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: redis-ingress
+spec:
+  rules:
+  - host: my-host.containers.mybluemix.net
+    http:
+      paths:
+      - path: /guestbook
+        backend:
+          serviceName: redissvc
+          servicePort: 30080
