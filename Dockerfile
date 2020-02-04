@@ -7,8 +7,9 @@ WORKDIR /app
 COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
+
 #RUN  pip install django==1.2
-# jrd django install 
+# jrd last minute django install not defined in requirements.txt 
 
 
 WORKDIR /go/src/github.com/simple-app/
