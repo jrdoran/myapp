@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 
 #RUN  pip install django==1.2
-# jrd last minute django install not defined in requirements.txt 
+# jrd last minute django install not defined in requirements.txt ( stupid move ) 
 
 
 WORKDIR /go/src/github.com/simple-app/
