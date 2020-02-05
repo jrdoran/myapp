@@ -8,7 +8,7 @@ COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-#RUN  pip install xdjango==1.2
+#RUN  pip install xdjango==1.2   
 # jrd last minute xdjango install not defined in requirements.txt ( stupid move ) 
 
 
