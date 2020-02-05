@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 #GITSECURE REMEDIATION 
-RUN  pip install django>=1.8.15  Django>=1.8.15 \ 
+RUN  pip install django>=1.8.15
      
 
 
