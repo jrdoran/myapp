@@ -1,13 +1,15 @@
-Examples of using multi-stage builds with docker and Go to reduce the final image size / attack surface.
-Raw
- Dockerfile1
-# Sample from @citizen428 https://dev.to/citizen428/comment/6cmh
+Example of using multi-stage builds with docker and Go to reduce the final image size / attack surface.
+
+
 FROM golang:alpine as build
 RUN apk add --no-cache ca-certificates
 WORKDIR /build
 ADD . .
 RUN CGO_ENABLED=0 GOOS=linux \
     go build -ldflags '-extldflags "-static"' -o app
+
+
+
 FROM scratch
 COPY --from=build /etc/ssl/certs/ca-certificates.crt \
      /etc/ssl/certs/ca-certificates.crt
